@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soporte - Worldwide App</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        h1, h2 { color: #0275AA; }
+        .card { background: #f7f9fb; border-left: 4px solid #0275AA; padding: 16px; margin: 16px 0; }
+        ul { margin-left: 20px; }
+        ol { margin-left: 20px; }
+        a { color: #0275AA; }
+        .small { color: #666; font-size: 12px; }
+    </style>
+    <meta name="description" content="Página de soporte de Worldwide App: contacto, preguntas frecuentes y solución de problemas." />
+</head>
+<body>
+    <h1>Soporte - Worldwide App</h1>
+    <p>Última actualización: 20 de enero de 2025</p>
+
+    <div class="card">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:diego.varela@wfsa.cl">diego.varela@wfsa.cl</a></p>
+        <p>Horario: Lun–Vie, 09:00–18:00 (GMT-3)</p>
+        <p>Tiempo de respuesta estimado: 24–48 horas hábiles</p>
+    </div>
+
+    <h2>Preguntas Frecuentes</h2>
+    <ul>
+        <li><strong>No puedo iniciar sesión:</strong> Verifica email/contraseña y conexión a Internet. Si el problema persiste, usa "¿Olvidaste tu contraseña?" para restablecerla.</li>
+        <li><strong>No recibo notificaciones:</strong> En Android ve a Configuración → Aplicaciones → Worldwide → Notificaciones y habilítalas. En iOS ve a Ajustes → Notificaciones → Worldwide y habilítalas.</li>
+        <li><strong>No veo mis instalaciones:</strong> Cierra sesión y vuelve a entrar para refrescar permisos. Si el problema persiste, contacta al administrador.</li>
+        <li><strong>No puedo enviar mensajes:</strong> Verifica que tengas conexión a Internet y que la conversación tenga participantes. Si el problema persiste, intenta cerrar y reabrir la conversación.</li>
+        <li><strong>No puedo ver archivos adjuntos:</strong> Verifica que tengas conexión a Internet. Los archivos se descargan desde Firebase Storage. Si el problema persiste, contacta al soporte.</li>
+        <li><strong>No veo el estado online/offline de otros usuarios:</strong> Esta información se actualiza en tiempo real. Si no aparece, verifica tu conexión a Internet.</li>
+        <li><strong>No puedo crear una conversación:</strong> Verifica que hayas seleccionado al menos una instalación y que hayas ingresado un título. El título es obligatorio.</li>
+        <li><strong>No puedo cambiar la visibilidad de un mensaje:</strong> Esta función solo está disponible para usuarios con roles administrativos (Subgerente WFSA, Administrador WFSA).</li>
+    </ul>
+
+    <h2>Solución de Problemas</h2>
+    <ol>
+        <li><strong>Actualiza la app:</strong> Descarga la última versión desde Google Play Store (Android) o App Store (iOS).</li>
+        <li><strong>Reinicia el dispositivo:</strong> A veces un reinicio simple resuelve problemas de conexión o rendimiento.</li>
+        <li><strong>Verifica permisos:</strong> 
+            <ul>
+                <li>Android: Configuración → Aplicaciones → Worldwide → Permisos (Notificaciones, Almacenamiento para adjuntos)</li>
+                <li>iOS: Ajustes → Worldwide → Notificaciones, Fotos (si quieres compartir imágenes)</li>
+            </ul>
+        </li>
+        <li><strong>Limpia la caché:</strong> En Android, ve a Configuración → Aplicaciones → Worldwide → Almacenamiento → Limpiar caché.</li>
+        <li><strong>Cierra sesión y vuelve a entrar:</strong> Esto refresca tus permisos y sincroniza tu información con Firestore.</li>
+        <li><strong>Verifica tu conexión a Internet:</strong> La app requiere conexión a Internet para funcionar correctamente, especialmente para mensajería.</li>
+        <li><strong>Si persiste, reinstala la app:</strong> Desinstala y vuelve a instalar la aplicación. Nota: Esto eliminará la caché local, pero tus datos en la nube se mantendrán.</li>
+    </ol>
+
+    <h2>Problemas Específicos de Mensajería</h2>
+    <ul>
+        <li><strong>Los mensajes no se envían:</strong> Verifica tu conexión a Internet. Si el problema persiste, intenta cerrar y reabrir la conversación.</li>
+        <li><strong>No puedo subir imágenes:</strong> Verifica que hayas dado permisos de acceso a fotos/cámara. Las imágenes se comprimen automáticamente antes de subirse.</li>
+        <li><strong>No puedo abrir documentos:</strong> Verifica tu conexión a Internet. Los documentos se descargan desde Firebase Storage. Si el problema persiste, contacta al soporte.</li>
+        <li><strong>No veo mensajes nuevos:</strong> Desliza hacia abajo para refrescar la conversación. Si el problema persiste, cierra y reabre la app.</li>
+        <li><strong>El contador de mensajes no leídos no se actualiza:</strong> Esto puede ocurrir si hay mensajes no visibles para tu rol. Los clientes solo ven mensajes marcados como "visibles para clientes".</li>
+    </ul>
+
+    <h2>Enlaces</h2>
+    <ul>
+        <li><a href="./index.html">Política de Privacidad</a></li>
+        <li><a href="mailto:diego.varela@wfsa.cl">Contactar soporte</a></li>
+    </ul>
+
+    <h2>Empresa</h2>
+    <p><strong>Worldwide Facility</strong></p>
+    <p>Dirección: Sexta Avenida 1236, San Miguel, Santiago, Chile.</p>
+    <p>Email: <a href="mailto:diego.varela@wfsa.cl">diego.varela@wfsa.cl</a></p>
+    <p>Horario de atención: Lunes a Viernes, 09:00–18:00 (GMT-3)</p>
+
+    <hr style="margin-top: 30px; border: none; border-top: 1px solid #ddd;">
+    <p class="small">© 2025 Worldwide Facility. Todos los derechos reservados.<br>
+    Worldwide App - Versión 1.0.0</p>
+</body>
+</html>
+

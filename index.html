@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - WFSA App</title>
+    <title>Política de Privacidad - Worldwide App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,11 +48,11 @@
     </style>
 </head>
 <body>
-    <h1>Política de Privacidad - WFSA App</h1>
+    <h1>Política de Privacidad - Worldwide App</h1>
     <p class="fecha">Última actualización: 20 de enero de 2025</p>
 
     <div class="highlight">
-        <p><strong>WFSA App</strong> es una aplicación móvil empresarial desarrollada por Worldwide Field Service para la gestión y monitoreo de servicios de seguridad. Nos comprometemos a proteger la privacidad de nuestros usuarios.</p>
+        <p><strong>Worldwide App</strong> es una aplicación móvil empresarial desarrollada por Worldwide Facility para la gestión y monitoreo de servicios de seguridad. Nos comprometemos a proteger la privacidad de nuestros usuarios.</p>
     </div>
 
     <h2>1. Información que Recopilamos</h2>
@@ -63,7 +63,7 @@
         <li><strong>Firebase UID:</strong> Identificador único de Firebase Authentication</li>
         <li><strong>Nombre completo:</strong> Para identificación dentro del sistema</li>
         <li><strong>Cliente/Empresa:</strong> Cliente al que pertenece el usuario</li>
-        <li><strong>Rol:</strong> Tipo de usuario (Cliente, Supervisor, Subgerente WFSA, Jefe WFSA, Administrador)</li>
+        <li><strong>Rol:</strong> Tipo de usuario (Cliente, Supervisor WFSA, Subgerente WFSA, Jefe WFSA, Gerente WFSA, Administrador WFSA)</li>
         <li><strong>Cargo:</strong> Puesto del usuario en la empresa (opcional)</li>
         <li><strong>Teléfono:</strong> Número de contacto (opcional)</li>
         <li><strong>Estado de cuenta:</strong> Si la cuenta está activa o inactiva</li>
@@ -88,17 +88,50 @@
         <li><strong>Caché local:</strong> Datos temporales de permisos y cobertura (se elimina automáticamente cada 24 horas)</li>
     </ul>
 
-    <h3>1.4 Funcionalidades Futuras (Próximamente)</h3>
-    <p>Las siguientes funcionalidades están en desarrollo y podrían requerir datos adicionales:</p>
+    <h3>1.4 Información de Mensajería Interna (almacenada)</h3>
+    <p>La aplicación incluye un módulo de mensajería interna que permite la comunicación entre usuarios autorizados:</p>
     <ul>
-        <li><strong>Mensajería interna:</strong> 
+        <li><strong>Conversaciones:</strong> 
             <ul>
-                <li>Historial de mensajes enviados por los usuarios</li>
-                <li>Fecha, hora y contenido de mensajes</li>
-                <li>Destinatarios de mensajes</li>
-                <li>Conservación: 90 días para auditoría</li>
+                <li>Identificadores de conversaciones creadas por los usuarios</li>
+                <li>Título de la conversación (obligatorio)</li>
+                <li>Instalación asociada a la conversación</li>
+                <li>Tipo de conversación (problema o seguimiento)</li>
+                <li>Participantes de la conversación (usuarios autorizados)</li>
+                <li>Estado de archivado (solo para roles administrativos)</li>
+                <li>Fecha de creación y última actualización</li>
             </ul>
         </li>
+        <li><strong>Mensajes:</strong> 
+            <ul>
+                <li>Contenido de los mensajes enviados por los usuarios</li>
+                <li>Fecha, hora y remitente de cada mensaje</li>
+                <li>Estado de lectura (leído/no leído por cada participante)</li>
+                <li>Visibilidad para clientes (control de visibilidad por roles administrativos)</li>
+                <li>Estado de entrega (enviado, entregado, leído, error)</li>
+            </ul>
+        </li>
+        <li><strong>Archivos adjuntos:</strong> 
+            <ul>
+                <li>Imágenes: Fotos compartidas en conversaciones (comprimidas automáticamente)</li>
+                <li>Documentos: Archivos PDF, Word, Excel, texto y otros formatos</li>
+                <li>Metadatos: Nombre del archivo, tamaño, tipo MIME</li>
+                <li>URLs de acceso: Enlaces seguros para descargar los archivos desde Firebase Storage</li>
+            </ul>
+        </li>
+        <li><strong>Presencia y estado de conexión:</strong> 
+            <ul>
+                <li>Estado online/offline de los usuarios (actualizado en tiempo real)</li>
+                <li>Última vez visto (timestamp de última actividad)</li>
+                <li>Esta información se sincroniza automáticamente con Firestore al iniciar sesión</li>
+            </ul>
+        </li>
+        <li><strong>Conservación:</strong> Los mensajes y conversaciones se conservan mientras la cuenta esté activa. Los usuarios con permisos administrativos pueden archivar conversaciones.</li>
+    </ul>
+
+    <h3>1.5 Funcionalidades Futuras (Próximamente)</h3>
+    <p>Las siguientes funcionalidades están en desarrollo y podrían requerir datos adicionales:</p>
+    <ul>
         <li><strong>Integración con Takary (sistema de asistencia):</strong>
             <ul>
                 <li>Ubicación GPS del usuario en tiempo real (solo durante servicio activo)</li>
@@ -111,14 +144,14 @@
 
     <p><strong>Nota importante:</strong> Cuando estas funcionalidades estén disponibles, se te notificará en la app y se solicitarán los permisos correspondientes antes de activarlas. Podrás elegir si deseas usarlas o no.</p>
 
-    <h3>1.5 Datos que NO Recopilamos (Actualmente)</h3>
+    <h3>1.6 Datos que NO Recopilamos (Actualmente)</h3>
     <ul>
         <li>❌ Ubicación GPS (excepto futura integración opcional con Takary)</li>
-        <li>❌ Contactos del teléfono</li>
+        <li>❌ Contactos del teléfono (solo se accede a contactos autorizados del sistema empresarial)</li>
         <li>❌ Historial de navegación web</li>
         <li>❌ Datos biométricos</li>
         <li>❌ Mensajes SMS o llamadas telefónicas</li>
-        <li>❌ Fotos o archivos multimedia</li>
+        <li>❌ Fotos o archivos multimedia del dispositivo (solo se accede a archivos seleccionados explícitamente por el usuario para compartir)</li>
         <li>❌ Información de pago o tarjetas</li>
         <li>❌ Datos de redes sociales</li>
         <li>❌ Información de otras aplicaciones</li>
@@ -146,21 +179,28 @@
             <ul>
                 <li>Enviar alertas sobre nuevas encuestas disponibles</li>
                 <li>Notificar recordatorios de encuestas pendientes</li>
-                <li>Solo se envían de lunes a viernes entre 9:00 y 18:00 horas</li>
+                <li>Notificar sobre nuevos mensajes en conversaciones</li>
+                <li>Solo se envían de lunes a viernes entre 9:00 y 18:00 horas (para encuestas)</li>
+                <li>Las notificaciones de mensajería se envían en tiempo real</li>
                 <li>El usuario puede desactivar las notificaciones en cualquier momento</li>
+            </ul>
+        </li>
+        <li><strong>Mensajería interna:</strong> 
+            <ul>
+                <li>Permitir comunicación entre usuarios autorizados dentro del sistema</li>
+                <li>Crear conversaciones grupales por instalación</li>
+                <li>Enviar mensajes de texto, imágenes y documentos</li>
+                <li>Control de visibilidad de mensajes para clientes (por roles administrativos)</li>
+                <li>Archivar conversaciones (solo para roles administrativos)</li>
+                <li>Mantener historial de mensajes para auditoría y seguimiento</li>
+                <li>Mostrar estado de presencia (online/offline) de participantes</li>
+                <li>Notificar a destinatarios sobre nuevos mensajes mediante push notifications</li>
             </ul>
         </li>
     </ul>
 
     <h3>2.2 Uso Futuro (Funcionalidades en Desarrollo)</h3>
     <ul>
-        <li><strong>Mensajería interna:</strong> 
-            <ul>
-                <li>Permitir comunicación entre usuarios autorizados</li>
-                <li>Mantener historial de mensajes para auditoría y seguimiento</li>
-                <li>Notificar a destinatarios sobre nuevos mensajes</li>
-            </ul>
-        </li>
         <li><strong>Integración Takary (Control de asistencia):</strong>
             <ul>
                 <li>Verificar que el guardia esté en la ubicación correcta al marcar asistencia</li>
@@ -187,8 +227,23 @@
     <h3>3.1 Dónde se Almacenan los Datos</h3>
     <ul>
         <li><strong>Firebase Authentication:</strong> Gestión de usuarios y autenticación</li>
-        <li><strong>Google Cloud BigQuery:</strong> Almacenamiento de datos de cobertura y usuarios</li>
-        <li><strong>Cloud Run:</strong> Servidor API para procesar solicitudes</li>
+        <li><strong>Google Cloud BigQuery:</strong> Almacenamiento de datos de cobertura, usuarios y permisos</li>
+        <li><strong>Cloud Firestore:</strong> Base de datos en tiempo real para:
+            <ul>
+                <li>Conversaciones y mensajes de la aplicación</li>
+                <li>Información de usuarios sincronizada (UID, email, rol, etc.)</li>
+                <li>Estado de presencia online/offline de usuarios</li>
+                <li>Última vez visto de cada usuario</li>
+            </ul>
+        </li>
+        <li><strong>Firebase Storage:</strong> Almacenamiento de archivos adjuntos:
+            <ul>
+                <li>Imágenes compartidas en conversaciones (comprimidas y con thumbnails)</li>
+                <li>Documentos compartidos (PDF, Word, Excel, texto, etc.)</li>
+                <li>Acceso mediante URLs seguras con tokens de autenticación</li>
+            </ul>
+        </li>
+        <li><strong>Cloud Run:</strong> Servidor API para procesar solicitudes y enviar notificaciones push</li>
         <li><strong>Dispositivo local:</strong> Caché temporal (24 horas) de permisos y datos de cobertura</li>
     </ul>
 
@@ -228,9 +283,16 @@
         </li>
     </ul>
 
-    <h3>5.2 Datos Futuros (cuando se implementen)</h3>
+    <h3>5.2 Datos de Mensajería</h3>
     <ul>
-        <li><strong>Historial de mensajes:</strong> Se conservará por 90 días para auditoría y luego se eliminará automáticamente</li>
+        <li><strong>Conversaciones y mensajes (Firestore):</strong> Se conservan mientras la cuenta esté activa y la conversación no haya sido archivada</li>
+        <li><strong>Archivos adjuntos (Firebase Storage):</strong> Se conservan mientras la conversación exista. Se eliminan automáticamente si la conversación es eliminada</li>
+        <li><strong>Estado de presencia (Firestore):</strong> Se actualiza en tiempo real y se conserva mientras el usuario esté activo</li>
+        <li><strong>Información de usuarios sincronizada (Firestore):</strong> Se sincroniza automáticamente al iniciar sesión y se actualiza cuando cambian los permisos</li>
+    </ul>
+
+    <h3>5.3 Datos Futuros (cuando se implementen)</h3>
+    <ul>
         <li><strong>Datos de ubicación (Takary):</strong> 
             <ul>
                 <li>Ubicación en tiempo real: NO se almacena, solo se verifica en el momento</li>
@@ -239,8 +301,6 @@
             </ul>
         </li>
     </ul>
-
-    <p><strong>Nota:</strong> Cuando se implementen mensajería y Takary, esta política se actualizará y se te notificará en la app.</p>
 
     <h2>6. Responsabilidad del Usuario</h2>
     
@@ -282,7 +342,7 @@
 
     <h2>8. Uso por Menores de Edad</h2>
     
-    <p>WFSA App es una aplicación empresarial destinada exclusivamente a <strong>usuarios mayores de 18 años</strong> que son empleados o clientes de Worldwide Field Service. No recopilamos intencionalmente información de menores de edad.</p>
+    <p>Worldwide App es una aplicación empresarial destinada exclusivamente a <strong>usuarios mayores de 18 años</strong> que son empleados o clientes de Worldwide Field Service. No recopilamos intencionalmente información de menores de edad.</p>
 
     <h2>9. Cookies y Tecnologías Similares</h2>
     
@@ -290,7 +350,7 @@
     <ul>
         <li><strong>SharedPreferences:</strong> Para almacenar caché local de permisos (24 horas)</li>
         <li><strong>Tokens de sesión:</strong> Para mantener la autenticación del usuario</li>
-        <li><strong>Firebase Cloud Messaging (FCM):</strong> Para enviar notificaciones push sobre encuestas disponibles</li>
+        <li><strong>Firebase Cloud Messaging (FCM):</strong> Para enviar notificaciones push sobre encuestas disponibles y mensajes nuevos</li>
         <li><strong>FCM Token:</strong> Identificador único para recibir notificaciones en el dispositivo específico</li>
     </ul>
 
@@ -323,7 +383,7 @@
         <h2>13. Contacto</h2>
         <p>Si tiene preguntas, inquietudes o solicitudes sobre esta Política de Privacidad o el tratamiento de sus datos personales, puede contactarnos:</p>
         <ul>
-            <li><strong>Empresa:</strong> Worldwide Field Service Administración (WFSA)</li>
+            <li><strong>Empresa:</strong> Worldwide Facility</li>
             <li><strong>Email:</strong> diego.varela@wfsa.cl</li>
             <li><strong>Teléfono:</strong> Disponible mediante solicitud por email</li>
             <li><strong>Dirección:</strong> Sexta Avenida 1236, San Miguel, Santiago, Chile</li>
@@ -331,11 +391,16 @@
         <p><strong>Responsable de Protección de Datos:</strong> Diego Varela</p>
     </div>
 
+    <h2>Enlaces</h2>
+    <ul>
+        <li><a href="./support.html">Soporte</a></li>
+        <li><a href="./index.html">Política de Privacidad</a></li>
+    </ul>
+
     <hr style="margin-top: 40px; border: none; border-top: 1px solid #ddd;">
     <p style="text-align: center; color: #666; font-size: 12px;">
-        © 2024 Worldwide Field Service Administración. Todos los derechos reservados.<br>
-        WFSA App - Versión 1.0.0
+        © 2025 Worldwide Facility. Todos los derechos reservados.<br>
+        Worldwide App - Versión 1.0.0
     </p>
 </body>
 </html>
-
